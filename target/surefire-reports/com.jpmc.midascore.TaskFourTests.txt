@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: com.jpmc.midascore.TaskFourTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 4.249 s <<< FAILURE! -- in com.jpmc.midascore.TaskFourTests
-com.jpmc.midascore.TaskFourTests.task_four_verifier -- Time elapsed: 0.289 s <<< ERROR!
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 2.674 s <<< FAILURE! -- in com.jpmc.midascore.TaskFourTests
+com.jpmc.midascore.TaskFourTests.task_four_verifier -- Time elapsed: 0.212 s <<< ERROR!
 org.apache.kafka.common.errors.SerializationException: Can't convert value of class com.jpmc.midascore.foundation.Transaction to class org.apache.kafka.common.serialization.StringSerializer specified in value.serializer
 	at org.apache.kafka.clients.producer.KafkaProducer.doSend(KafkaProducer.java:1003)
 	at org.apache.kafka.clients.producer.KafkaProducer.send(KafkaProducer.java:947)
@@ -12,9 +12,9 @@ org.apache.kafka.common.errors.SerializationException: Can't convert value of cl
 	at org.springframework.kafka.core.KafkaTemplate.send(KafkaTemplate.java:551)
 	at com.jpmc.midascore.KafkaProducer.send(KafkaProducer.java:20)
 	at com.jpmc.midascore.TaskFourTests.task_four_verifier(TaskFourTests.java:31)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
 Caused by: java.lang.ClassCastException: class com.jpmc.midascore.foundation.Transaction cannot be cast to class java.lang.String (com.jpmc.midascore.foundation.Transaction is in unnamed module of loader 'app'; java.lang.String is in module java.base of loader 'bootstrap')
 	at org.apache.kafka.common.serialization.StringSerializer.serialize(StringSerializer.java:29)
 	at org.apache.kafka.common.serialization.Serializer.serialize(Serializer.java:62)

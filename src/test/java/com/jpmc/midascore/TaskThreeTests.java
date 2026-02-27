@@ -18,6 +18,9 @@ public class TaskThreeTests {
     private KafkaProducer kafkaProducer;
 
     @Autowired
+    private com.jpmc.midascore.repository.UserRepository userRepository;
+
+    @Autowired
     private UserPopulator userPopulator;
 
     @Autowired
